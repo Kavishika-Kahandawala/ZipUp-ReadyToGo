@@ -22,7 +22,6 @@ Originally created to eliminate a tedious, manual workflow in my office (I've ma
 ```bash
 go build main.go
 ```
-<br>
 
 ## 🛠️ Usage
 
