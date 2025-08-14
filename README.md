@@ -17,6 +17,12 @@ Originally created to eliminate a tedious, manual workflow in my office (I've ma
 
 ## 🚀 Quick Start
 
+### ✅ Running th project:
+
+```bash
+go run main.go
+```
+
 ### ✅ Build the executable:
 
 ```bash
