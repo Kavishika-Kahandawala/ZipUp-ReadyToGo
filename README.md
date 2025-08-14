@@ -17,7 +17,7 @@ Originally created to eliminate a tedious, manual workflow in my office (I've ma
 
 ## 🚀 Quick Start
 
-### ✅ Running th project:
+### ✅ Running the project:
 
 ```bash
 go run main.go
