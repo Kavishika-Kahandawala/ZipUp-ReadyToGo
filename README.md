@@ -1,3 +1,5 @@
+<p align="right"> <img src="https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white" alt="GoLan"> </p>
+
 # ⚡ ZipUp-ReadyToGo
 
 **ZipUp-ReadyToGo** is a lightweight command-line tool built in Go that automates repetitive file preparation tasks — including renaming, organizing, and packaging data — so it's ready for deployment in seconds.
