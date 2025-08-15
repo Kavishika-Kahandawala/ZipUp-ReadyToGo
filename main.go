@@ -36,8 +36,7 @@ func main() {
 	fmt.Println(teal + "\nThis is like a public-beta version")
 	fmt.Println("So, if you have any feedback, let me know. :)")
 	fmt.Print("If you need to exclude specific files or folders, please place them inside a folder named ‘DNU’, stands for ‘Do Not Use’ xd.\n\n" + resetColor)
-	fmt.Println(logColor + "!! Please note that once files are renamed, you can no longer revert them.")
-	fmt.Println("!! So if you need them, please have a backup first :)" + resetColor)
+
 	scanner := bufio.NewScanner(os.Stdin)
 
 	fmt.Print("Enter the path to the main folder: ")
@@ -108,11 +107,15 @@ func main() {
 			for _, subSubfolder := range subSubfolders {
 				if subSubfolder.IsDir() {
 					oldPath := filepath.Join(subfolderPath, subSubfolder.Name())
+					rawPath := filepath.Join(subfolderPath, subSubfolder.Name()+"_RAW")
 					tempPath := filepath.Join(subfolderPath, subSubfolder.Name()+suffix)
 					newPath := filepath.Join(newFolderPath, subSubfolder.Name()+suffix+".zip")
 
 					// Print progress
 					fmt.Printf(logColor+"\nProcessing %s...\n", tempPath+resetColor)
+
+					zipFolder(oldPath, rawPath+".zip")
+					fmt.Printf("Created RAW Zip for %s\n", rawPath)
 
 					os.Rename(oldPath, tempPath)
 					if needRename {
